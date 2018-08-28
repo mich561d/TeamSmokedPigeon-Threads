@@ -14,7 +14,7 @@ public class Opgave4 {
         }
         //System.out.println("Main is done");
         workingJack.shutdown();
-        
+
     }
 
 }
@@ -34,14 +34,16 @@ class RunnerY implements Runnable {
     @Override
     public void run() {
         synchronized (Runner4.class) { // skal synchronized være inde i trycatch eller omvendt?
-            try {
-                int myH = hundred;
-                Thread.sleep(sleepTime); // simulate some external job taking time
-                myH += 100;
-                hundred = myH;
-                System.out.println("Task: " + count + ": Hundred = " + hundred);
-            } catch (InterruptedException ex) {
-                System.out.println("We got interrupted");
+            for (int i = 0; i < 2; i++) {
+                try {
+                    int myH = hundred;
+                    Thread.sleep(sleepTime); // simulate some external job taking time
+                    myH += 100;
+                    hundred = myH;
+                    System.out.println("Task: " + count + ": Hundred = " + hundred);
+                } catch (InterruptedException ex) {
+                    System.out.println("We got interrupted");
+                }
             }
         }
     }
