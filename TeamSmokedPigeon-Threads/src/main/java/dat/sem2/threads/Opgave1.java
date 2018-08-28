@@ -19,7 +19,6 @@ public class Opgave1 {
             t.join();
         }
     }
-
 }
 
 class Worker implements Runnable {
@@ -32,9 +31,9 @@ class Worker implements Runnable {
 
     @Override
     public void run() {
-        while(!db.isEmpty()) {
-        String temp = db.getString();
-        System.out.println(temp);
+        while (!db.isEmpty()) {
+            String temp = db.getString();
+            System.out.println(temp);
         }
     }
 
@@ -46,13 +45,13 @@ class Database {
 
     public void generateStrings() {
         int max = (int) 'Z' - (int) 'A';
-        for (int i = 0; i < max; i++) {
+        for (int i = 0; i < max + 1; i++) {
             char c = (char) (i + 65);
             String temp = "" + c + c + c;
             strings.add(temp);
         }
     }
-    
+
     public boolean isEmpty() {
         return strings.isEmpty();
     }
