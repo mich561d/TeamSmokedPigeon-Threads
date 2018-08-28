@@ -1,5 +1,5 @@
 Opgave 3:
 
-  a) Hvorfor sker det? Fordi der ikke bliver joinet, bliver main færdig, inden alle threads er færdige med deres opgaver.
+  a) Hvorfor sker det? Fordi der er forskellig delay på hver thread så det kommer ud random.
   b) lad threads joine og lad det køre i synchronized så de også kommer i rigtig rækkefølge hver gang.
   c) Lad threads kører som naboer så hver thread kun tager sig af en ting så de ikke kan tage arbejdet fra hinanden.
