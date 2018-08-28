@@ -16,7 +16,7 @@ public class Executor06 {
         ExecutorService workingJack = Executors.newFixedThreadPool(17);
         System.out.println("Main starts");
         for (int count = 0; count < 100; count++) {
-            Runnable task = new MyTask4(count);
+            Runnable task = new Runner4(count);
             workingJack.submit(task);
         }
         System.out.println("Main is done");
@@ -26,14 +26,14 @@ public class Executor06 {
 
 }
 
-class MyTask4 implements Runnable {
+class Runner4 implements Runnable {
 
     private int count = 0;
     private int sleepTime = 0;
 
     private static List<Integer> list = new ArrayList<>();
 
-    MyTask4(int cnt) {
+    Runner4(int cnt) {
         sleepTime = (int) (Math.random() * 800 + 200); // At least 200 ms, up to one sec
         count = cnt;
     }
