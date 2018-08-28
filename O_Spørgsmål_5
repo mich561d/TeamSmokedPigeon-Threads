@@ -1,1 +1,2 @@
-
+syntaksfejlen er fordi man bruger lambda, den lokale viariable der bliver referrert fra lambda expresion skal være final. 
+løsningen ville derfor være at trække det ud og lave det final.
