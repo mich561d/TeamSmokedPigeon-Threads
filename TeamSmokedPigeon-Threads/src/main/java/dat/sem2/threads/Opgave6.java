@@ -22,6 +22,7 @@ public class Opgave6 {
     }
 
 }
+//lorte pik
 
 class FileRunner implements Runnable {
 
