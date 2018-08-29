@@ -1,6 +1,7 @@
 package dat.sem2.threads;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -21,7 +22,7 @@ public class Executor06 {
         }
         System.out.println("Main is done");
         workingJack.shutdown();
-        
+
     }
 
 }
@@ -31,7 +32,8 @@ class Runner4 implements Runnable {
     private int count = 0;
     private int sleepTime = 0;
 
-    private static List<Integer> list = new ArrayList<>();
+    private static List<Integer> list = Collections.synchronizedList(new ArrayList<Integer>());
+    //new ArrayList<>();
 
     Runner4(int cnt) {
         sleepTime = (int) (Math.random() * 800 + 200); // At least 200 ms, up to one sec

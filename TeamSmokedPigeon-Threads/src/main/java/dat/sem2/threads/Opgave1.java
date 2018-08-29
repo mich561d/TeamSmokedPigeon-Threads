@@ -46,7 +46,7 @@ class Database {
     public void generateStrings() {
         int max = (int) 'Z' - (int) 'A';
         for (int i = 0; i < max + 1; i++) {
-            char c = (char) (i + 65);
+            char c = (char) (i + (int)'A');
             String temp = "" + c + c + c;
             strings.add(temp);
         }
