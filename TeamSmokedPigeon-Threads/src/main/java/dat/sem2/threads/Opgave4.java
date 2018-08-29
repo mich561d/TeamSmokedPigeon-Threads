@@ -22,7 +22,7 @@ public class Opgave4 {
     }
 
     private void Dem() throws InterruptedException {
-        final int hmWorkers = 5000;
+        final int hmWorkers = 250000;
         Thread[] threads = new Thread[hmWorkers];
         for (int index = 0; index < hmWorkers; index++) {
             threads[index] = new Thread(new Demolition(0));
