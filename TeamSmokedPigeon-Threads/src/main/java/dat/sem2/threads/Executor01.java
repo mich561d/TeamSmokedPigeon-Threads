@@ -18,5 +18,6 @@ public class Executor01 {
         }
         System.out.println( "Waits for workingJack to finish" );
         workingJack.shutdown();
+        System.out.println( "All done" );
     }
 }

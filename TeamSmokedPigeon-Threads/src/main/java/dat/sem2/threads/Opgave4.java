@@ -51,7 +51,7 @@ class RunnerY implements Runnable {
 
     @Override
     public void run() {
-        synchronized (Runner4.class) { // skal synchronized være inde i trycatch eller omvendt?
+        synchronized (RunnerY.class) { // skal synchronized være inde i trycatch eller omvendt?
             for (int i = 0; i < 2; i++) {
                 try {
                     int myH = hundred;
@@ -81,7 +81,7 @@ class Demolition implements Runnable {
 
     @Override
     public void run() {
-        synchronized (Runner4.class) { // skal synchronized være inde i trycatch eller omvendt?
+        synchronized (Demolition.class) { // skal synchronized være inde i trycatch eller omvendt?
             for (int i = 0; i < 10; i++) {
                 try {
                     int myH = hundred;

@@ -7,7 +7,7 @@ package dat.sem2.threads;
  */
 public class ThreadsSyncUnsafe {
     public static void main( String[] args ) throws InterruptedException {
-        final int noThreads = 1000;
+        final int noThreads = 2;
         final int noLoops = 1000;
         final int addNumber = 15;
         final int expectedSum = noThreads * noLoops * addNumber;

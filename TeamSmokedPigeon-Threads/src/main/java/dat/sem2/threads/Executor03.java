@@ -12,7 +12,7 @@ public class Executor03 {
 
     public static void main( String[] args ) {
         //ExecutorService workingJack = Executors.newSingleThreadExecutor();
-        ExecutorService workingJack = Executors.newFixedThreadPool( 3);
+        ExecutorService workingJack = Executors.newFixedThreadPool( 4 );
         System.out.println( "Main starts" );
         for ( int count = 0; count < 25; count++ ) {
             Runnable task = new MyTask( count );
@@ -34,6 +34,7 @@ class MyTask implements Runnable {
 
     @Override
     public void run() {
-        System.out.println( "Task: " + count );
+        char c = (char)(count+'A' );
+        System.out.println( "Task: " + c+c+c );
     }
 }
